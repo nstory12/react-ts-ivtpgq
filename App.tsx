@@ -11,6 +11,7 @@ export default function App() {
 
   const togglePopup = () => {
     setShowPopup(!showPopup);
+    alert(`Text box의 값: ${inputRef.current.value}`); // Popup으로 값 출력
   };
 
   return (
@@ -19,8 +20,8 @@ export default function App() {
       <input type="text" ref={inputRef} />
       <button onClick={handlseClick}>Focus Input BT</button>
 
-      <button onClick={togglePopup}>팝업 열기</button>
-      {showPopup && <h2>TEST</h2>}
+      <button onClick={togglePopup}>Textbox Value</button>
+      {/* {showPopup && <h2>TEST</h2>} */}
     </div>
   );
 }
