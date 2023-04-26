@@ -17,11 +17,13 @@ export default function App() {
   return (
     <div className="App">
       <h1> Ref Example</h1>
-      <input type="text" ref={inputRef} />
-      <button onClick={handlseClick}>Focus Input BT</button>
+      <h1>
+        <input type="text" ref={inputRef} />
+        <button onClick={handlseClick}>FocusInputBT</button>
+        <button onClick={togglePopup}>TextBoxValue</button>
+      </h1>
 
-      <button onClick={togglePopup}>Textbox Value</button>
-      {/* {showPopup && <h2>TEST</h2>} */}
+      {showPopup && <h2>{inputRef.current.value}</h2>}
     </div>
   );
 }
